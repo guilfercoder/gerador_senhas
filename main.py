@@ -21,4 +21,17 @@ while True:
         numeros = random.choices(string.digits, k=qntd_numeros)
         especiais = random.choices(string.ascii_letters, k=qntd_especiais)
 
+        senha_lista = letras + numeros + especiais
+
+        random.shuffle(senha_lista)
+
+        senha = "".join(senha_lista)
+
+        print(f"\n Sua senha gerada foi: {senha}")
+
+    repetir = input("Deseja repetir? [S/N]: ").lower()
+    if repetir == "n":
+        print("Parabéns pela nova senha!")
+    if repetir != "S":
+        print("\n Parabéns pela senha!")
 
